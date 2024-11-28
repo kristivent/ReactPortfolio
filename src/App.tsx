@@ -1,34 +1,48 @@
-import React from 'react';
+// src/App.tsx
+import React, { useState } from 'react';
+import './App.css';
 import Header from './components/Header';
-import Project from './components/Project';
 import Footer from './components/Footer';
+import AboutMe from './components/AboutMe';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
+import Resume from './components/Resume';
 
-const App = () => {
+function App() {
+  const [currentSection, setCurrentSection] = useState('About Me');
+
+  const renderSection = () => {
+    switch (currentSection) {
+      case 'About Me':
+        return <AboutMe />;
+      case 'Portfolio':
+        return <Portfolio />;
+      case 'Contact':
+        return <Contact />;
+      case 'Resume':
+        return <Resume />;
+      default:
+        return <AboutMe />;
+    }
+  };
+
   return (
-    <div>
+    <div className="App">
       <Header />
+      <nav>
+        <ul>
+          <li onClick={() => setCurrentSection('About Me')}>About Me</li>
+          <li onClick={() => setCurrentSection('Portfolio')}>Portfolio</li>
+          <li onClick={() => setCurrentSection('Contact')}>Contact</li>
+          <li onClick={() => setCurrentSection('Resume')}>Resume</li>
+        </ul>
+      </nav>
       <main>
-        <section id="about">
-          <h2>About Me</h2>
-          <p>I am a recent Coding and Programming Bootcamp graduate hoping to make a career change into the technology field.  I am currently an 18-year veteran high school English teacher and department chair.</p>
-        </section>
-        <section id="projects">
-          <h2>My Projects</h2>
-          <Project title="Project 1" description="Description of project 1." />
-          <Project title="Project 2" description="Description of project 2." />
-          <Project title="Project 3" description="Description of project 3." />
-          <Project title="Project 4" description="Description of project 4." />
-          <Project title="Project 5" description="Description of project 5." />
-          <Project title="Project 6" description="Description of project 6." />
-        </section>
-        <section id="contact">
-          <h2>Contact Me</h2>
-          <p>Provide your contact information here.</p>
-        </section>
+        {renderSection()}
       </main>
       <Footer />
     </div>
   );
-};
+}
 
 export default App;
