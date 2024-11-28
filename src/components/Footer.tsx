@@ -1,11 +1,12 @@
+// src/components/Footer.tsx
 import React from 'react';
 
-const Footer = () => {
-    return (
-        <footer>
-            <p>&copy; {new Date().getFullYear()} Created by Kristi Vent.</p>
-        </footer>
-    );
+const Footer: React.FC = () => {
+  return (
+    <footer>
+      <p>GitHub | LinkedIn | Email</p>
+    </footer>
+  );
 };
 
 export default Footer;
