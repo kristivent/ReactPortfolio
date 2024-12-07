@@ -7,9 +7,9 @@ const Resume: React.FC = () => {
       <a href="path/to/resume.pdf" download>Download Resume</a>
       <h3>Proficiencies</h3>
       <ul>
-        <li>Proficiency 1</li>
-        <li>Proficiency 2</li>
-        <li>Proficiency 3</li>
+        <li>Leadership</li>
+        <li>Communication Skills 2</li>
+        <li>Experience with: HTML, CSS, JavaScript, TypeScript, React, Nodejs, Postgres</li>
       </ul>
     </section>
   );
