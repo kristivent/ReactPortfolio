@@ -8,12 +8,12 @@ import app6 from '../assets/app6.jpg';
 
 const Portfolio: React.FC = () => {
   const applications = [
-    { img: app1, title: 'Nodejs and Inquirer: Vehicle Builder', deployedLink: 'deployed-link-1', githubLink: 'github-link-1' },
-    { img: app2, title: 'Postgres: Employee Tracker', deployedLink: 'deployed-link-2', githubLink: 'github-link-2' },
-    { img: app3, title: 'Nodejs: README Generator', deployedLink: 'deployed-link-3', githubLink: 'github-link-3' },
-    { img: app4, title: 'React: Portfolio', deployedLink: 'deployed-link-4', githubLink: 'github-link-4' },
-    { img: app5, title: 'Application 5 TBA', deployedLink: 'deployed-link-5', githubLink: 'github-link-5' },
-    { img: app6, title: 'Application 6 TBA', deployedLink: 'deployed-link-6', githubLink: 'github-link-6' },
+    { img: app1, title: 'Nodejs and Inquirer: Vehicle Builder', deployedLink: 'https://deployed-link-1.com', githubLink: 'https://github.com/kristivent/VehicleBuilderNode' },
+    { img: app2, title: 'Postgres: Employee Tracker', deployedLink: 'https://deployed-link-2.com', githubLink: 'https://github.com/kristivent/EmployeeTrackSQL' },
+    { img: app3, title: 'Nodejs: README Generator', deployedLink: 'https://deployed-link-3.com', githubLink: 'https://github.com/kristivent/READMEgen_nodejs' },
+    { img: app4, title: 'React: Portfolio', deployedLink: 'https://deployed-link-4.com', githubLink: 'https://github.com/kristivent/ReactPortfolio' },
+    { img: app5, title: 'Application 5 TBA', deployedLink: 'https://deployed-link-5.com', githubLink: 'https://github.com/your-username/repo-5' },
+    { img: app6, title: 'Application 6 TBA', deployedLink: 'https://deployed-link-6.com', githubLink: 'https://github.com/your-username/repo-6' },
   ];
 
   return (
@@ -26,8 +26,8 @@ const Portfolio: React.FC = () => {
               <img src={app.img} className="card-img-top" alt={app.title} />
               <div className="card-body">
                 <h5 className="card-title">{app.title}</h5>
-                <a href={app.deployedLink} className="btn btn-primary">Deployed Application</a>
-                <a href={app.githubLink} className="btn btn-secondary ml-2">GitHub Repository</a>
+                <a href={app.deployedLink} className="btn btn-primary" target="_blank" rel="noopener noreferrer">Deployed Application</a>
+                <a href={app.githubLink} className="btn btn-secondary ml-2" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
               </div>
             </div>
           </div>
@@ -37,4 +37,4 @@ const Portfolio: React.FC = () => {
   );
 };
 
-export default Portfolio; 
+export default Portfolio;
