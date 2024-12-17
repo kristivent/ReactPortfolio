@@ -1,10 +1,10 @@
 import React from 'react';
-import app1 from '../assets/app1.jpg';
-import app2 from '../assets/app2.jpg';
-import app3 from '../assets/app3.jpg';
-import app4 from '../assets/app4.jpg';
-import app5 from '../assets/app5.jpg';
-import app6 from '../assets/app6.jpg';
+import app1 from '../assets/images/app1.jpg';
+import app2 from '../assets/images/app2.jpg';
+import app3 from '../assets/images/app3.jpg';
+import app4 from '../assets/images/app4.jpg';
+import app5 from '../assets/images/app5.jpg';
+import app6 from '../assets/images/app6.jpg';
 
 const Portfolio: React.FC = () => {
   const applications = [

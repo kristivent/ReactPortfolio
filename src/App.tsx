@@ -6,6 +6,7 @@ import AboutMe from './components/AboutMe';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [currentSection, setCurrentSection] = useState('About Me');
